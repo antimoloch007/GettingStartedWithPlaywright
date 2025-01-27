@@ -3,11 +3,8 @@ import { test, expect } from '@playwright/test';
 test('test', async ({ page }) => {
   await page.goto('https://www.cartier.com/en-us/home');
   await page.getByRole('menu', { name: 'Watches' }).click();
-  
-  await page.getByRole('link', { name: 'View all' }).click();
- 
+  await page.getByRole('link', { name: 'View all' }).click(); 
   await page.getByRole('link', { name: 'Refine by Selection for: Her' }).click();
-  
   await page.getByRole('link', { name: 'Refine by Case material: Yellow gold' }).click();
   await page.getByRole('link', { name: 'Refine by Case size: Mini' }).click();
   await page.getByText('Tank Louis Cartier watch Mini').click();
